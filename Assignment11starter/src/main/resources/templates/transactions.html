@@ -27,21 +27,12 @@
           </td>
           <td>[[${transaction.date}]]</td>
           <td>[[${transaction.retailer}]]</td> 
-          <td th:text="${transaction.amount > 0 ? transaction.amount : ''}"></td>
-          <td th:text="${transaction.amount < 0 ? transaction.amount : ''}"></td>
+          <td th:text="${transaction.type == 'C' ? transaction.amount : ''}"></td>
+          <td th:text="${transaction.type == 'D' ? transaction.amount : ''}"></td>
         </tr>
       </table>
     </div>
     
-    <!-- Show the details of a single transaction -->
-    <div th:if="${transaction != null}">
-      <h3>Transaction Details</h3>
-      <p><b>Transaction ID: [[${transaction.id}]]</b></p>
-      <p>Date: [[${transaction.date}]]</p>
-      <p>Retailer: [[${transaction.retailer}]]</p>
-      <p>Amount: [[${transaction.amount}]]</p>
-      
-      <a th:href="@{/transactions}">Back to Transaction History</a>
-    </div>
+    
   </body>
 </html>

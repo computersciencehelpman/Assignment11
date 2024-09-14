@@ -1,0 +1,14 @@
+<html xmlns:th="http://thymeleaf.org">
+
+<!-- Show the details of a single transaction -->
+    <div th:if="${transaction != null}">
+      <h3>Transaction Details</h3>
+      <p><b>Transaction ID: [[${transaction.id}]] <span th:if="${transaction.type == 'D'}">(Debit)</span> <span th:if="${transaction.type == 'C'}">(Credit)</span></b></p>
+      <p>Date: [[${transaction.date}]]</p>
+      <p>Retailer: [[${transaction.retailer}]]</p>
+      <p>Amount: [[${transaction.amount}]]</p>
+      
+      <a th:href="@{/transactions}">Back to Transaction History</a>
+    </div>
+    
+ </html>

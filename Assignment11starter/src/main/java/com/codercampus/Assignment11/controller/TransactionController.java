@@ -29,6 +29,6 @@ public class TransactionController {
         Transaction transaction = transactionRepository.findById(transactionId).orElse(null);
         model.addAttribute("transaction", transaction);
         // If you don't have a dedicated detail page, you might need to handle it differently.
-        return "transactions"; // Make sure this page can handle both listings and detail display
+        return "transactionDetails"; // Make sure this page can handle both listings and detail display
     }
 }
