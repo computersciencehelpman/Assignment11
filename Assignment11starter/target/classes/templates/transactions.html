@@ -1,15 +1,10 @@
-<html xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
   <head>
     <title>Online Bank</title>
     <link rel="stylesheet" href="/css/transactions.css"/>
   </head>
   <body>
     <h2>Transaction History</h2>
-    
-    <!-- Conditionally show all transactions or a single transaction detail -->
-    
-    <!-- Show the full transaction history -->
-    <div th:if="${transaction == null}">
       <table>
         <tr>
           <th>ID</th>
@@ -32,7 +27,5 @@
         </tr>
       </table>
     </div>
-    
-    
   </body>
 </html>

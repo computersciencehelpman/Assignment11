@@ -23,9 +23,7 @@ public class TransactionRepository {
 	}
 	
 	public List<Transaction> findAll () {
-		return transactions.stream()
-						   .sorted(Comparator.comparing(Transaction::getDate))
-						   .collect(Collectors.toList());
+		return transactions;
 	}
 	
 	public Optional<Transaction> findById(Long id) {
